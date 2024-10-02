@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Бронирование</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+
+    <div class="container">
+        <h1>Форма бронирования "Сизиф"</h1>
+        <form id="bookingForm">
+            <label for="name">Имя (только кириллица, обязательно)</label>
+            <input type="text" id="name" name="name" required>
+            <span class="error" id="nameError">Имя должно содержать только кириллицу</span>
+
+            <label for="phone">Телефон (11 цифр, обязательно)</label>
+            <input type="text" id="phone" name="phone" required>
+            <span class="error" id="phoneError">Телефон должен содержать 11 цифр</span>
+
+            <label for="date">Дата начала брони (не ранее следующего дня)</label>
+            <input type="date" id="date" name="date" required>
+            <span class="error" id="dateError">Выберите дату не ранее следующего дня</span>
+
+            <label for="time">Время начала брони</label>
+            <input type="time" id="time" name="time" required>
+
+            <label for="duration">Длительность брони (обязательно)</label>
+            <select id="duration" name="duration" required>
+                <option value="1">1 час</option>
+                <option value="3">3 часа</option>
+                <option value="5">5 часов</option>
+            </select>
+
+            <label for="terms">
+                <input type="checkbox" id="terms" name="terms" checked>
+                Я согласен с условиями
+            </label>
+
+            <button type="submit" id="submitBtn">Забронировать</button>
+        </form>
+
+        <div class="success-message" id="successMessage"></div>
+    </div>
+
+    
+    <script src="script.js"></script>
+
+</body>
+</html>
